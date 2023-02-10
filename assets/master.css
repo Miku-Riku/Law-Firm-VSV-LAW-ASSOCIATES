@@ -5,10 +5,19 @@
 :root{
   /*========FONT=========*/
   --body-font: 'Poppins', sans-serif;
-
+  --first-shade : #00A6FB;
+  --second-shade : #0582CA;
+  --third-shade : #006494;
   /*========FONT SIZE=====*/
+  --h1-font-size : 55px;
+  --normal-font-size : 18px;
+  --font-color : #00A6FB;
 }
+
+
 /* ==============BODY============= */
+
+
 body {
   font-family: var(--body-font);
   text-decoration : none;
@@ -16,27 +25,29 @@ body {
   padding : 0px;
   margin : 0px;
   font-size : 25px;
-  overflow-y: hidden;
-  /* position: relative; */
-  /* height : 200vh */
+}
+.godparent {
+
 }
 
 /* ==========HEADER============ */
+header {
+  position : sticky;
+  top : 0px;
+  z-index: 999;
+}
 .header {
   height : 15vh;
-  border-bottom: 2px solid grey;
-  /* width : 100vw; */
-  /* position : sticky; */
-  /* top : 0px; */
+  box-shadow : 0px 0px 2.5px black;
   display : flex;
   justify-content: space-between;
-  background-color: #E04AAC;
+  background-color: white;
 
 }
 
 /* ========LOGO====== */
 .logo{
-  border : 1px solid pink;
+  /* border : 1px solid pink; */
   width : 20%;
   margin-left : 10%;
 
@@ -52,10 +63,12 @@ body {
 
 /* ==========MENU=========== */
 .menu {
-  border : 1px solid red;
   width : 40%;
-  margin-right : 10%;
   display : flex;
+}
+
+.menu_android {
+  display : none;
 }
 
 .menu ul {
@@ -67,84 +80,187 @@ body {
 
 .menu ul li {
   list-style-type : none;
+}
+
+.menu_link, button {
   font-size : 0.8em;
-  background-color: #5AE04A;
-  padding : 9px;
-  border-radius : 6px;
-
-}
-
-.menu ul li:hover {
-  background-color: #219413;
+  background-color: var(--first-shade);
   cursor : pointer;
+  padding : 9px;
+  text-decoration : none;
+  color : white;
+  border : none;
+  transition : background-color 0.4s;
+}
+.menu ul li a:hover, button:hover{
+  background-color: var(--second-shade);
 }
 
-.menu ul li a {
-  text-decoration : none;
-  color : black;
-}
+ .active {
+   background-color: var(--second-shade);
+ }
 
 /* =========PAGE BODY============ */
-.body_container{
-    display : grid;
-    gap : 0px;
-    grid-template-columns: 12.5% 75% 12.5%;
-    grid-template-rows: 85vh;
-}
 
-.grid-item {
-  border:1px solid black;
-}
-
-.item1, .item3 {
-    background-color: #219413;
-}
-
-.item2 {
-  /* background-image: url('image.jpg'); */
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  background-color: pink;
+.body_area {
+  height : 85vh;
+  width : 100%;
   display : flex;
   justify-content: center;
   align-items: center;
+  position : relative;
+}
+
+.body_area::before {
+  content : '';
+  position : absolute;
+  box-sizing : border-box;
+  background-color: pink;
+  width : 100%;
+  height : 100%;
+  border : 0px solid red;
+  z-index : -5;
+  background-image: url("images/image-3.jpg");
+  background-repeat : no-repeat;
+  background-position : center top;
+  background-size : cover;
+  opacity :0.2;
 }
 
 
-.item2 .container {
-    height : 70%;
+.body_area .body_area_container {
+    height : 90%;
     width : 80%;
-    border: 10px solid red;
-    display : grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
 }
 
-.item2 .container .text {
-  border: 4px solid blue;
-  overflow-y : auto;
+.body_area .body_area_container .text {
   text-align : center;
 }
 
-.item2 .container .text #welcome{
-  font-size : 30px;
+.body_area .body_area_container .text #welcome{
+  font-size : var(--h1-font-size);
+  /* border : 3px solid green; */
   font-weight: 600;
+  margin : 3% 0;
+  display : block;
+  cursor : pointer;
+  transition-property : transform;
+  transition-duration : 0.5s;
+  position : relative;
+  padding : 20px;
 }
 
-.item2 .container .text #description{
-  font-size : 18px;
-  line-height: 15px;
+.body_area .body_area_container .text #welcome:hover{
+  transform: translate(0.8px, 2px);
+  font-weight: bolder;
+  color : var(--second-shade);
 }
 
-.item2 .container .image {
-  border: 4px solid blue;
+.home_text_welcome::after{
+  content: "";
+  position: absolute;
+  height : 4px;
+  bottom : 0;
+  left : 0;
+  right : 0;
+  transform : scaleX(0);
+  transform-origin : 50% 50%;
+  background-color: black;
+  transition-property : transform;
+  transition-duration : 0.5s;
+
+}
+.home_text_welcome:hover::after{
+    transform : scaleX(0.85);
+    background-color : var(--second-shade);
 }
 
-.item2 .container .image img {
-  border: 1px solid black;
-  width :85%;
-  height : 85%;
-  /* object-fit : contain; */
-  margin : 7.5% 7.5% 7.5% 7.5%;
+.body_area .body_area_container .text #description{
+  font-size : var(--normal-font-size);
+  display : block;
+  cursor : pointer;
+  transition-property : transform;
+  transition-duration : 0.5s;
+  margin : 2% 0;
+  line-height : 24px;
+}
+
+.body_area .body_area_container .text #description:hover {
+  transform: translate(0.8px, 2px);
+  font-weight : 500;
+  color : var(--second-shade);
+}
+
+.body_area .body_area_container .explore_btn {
+  width : 100%;
+  display : flex;
+  justify-content: center;
+}
+
+.body_explore_btn {
+    font-size : 1.2em;
+    column-gap : 7px;
+    transition : font-size 1s;
+}
+
+.body_explore_btn:hover {
+  font-size : 1.35em;
+}
+
+.page_gap {
+  width : 100%;
+  height : 20vh;
+  background-color : #006494;
+  box-shadow: 0 0 5px inset;
+}
+
+
+
+
+
+
+/* =============media query============= */
+
+@media screen and (max-width : 480px) {
+  :root {
+    --body-font: 'Poppins', sans-serif;
+    --first-color : #00A6FB;
+    --first-color-alt : #0582CA;
+
+    /* =========Font Size============ */
+    --h1-font-size : 37px;
+    --normal-font-size : 17px;
+  }
+  .menu {
+    display : none;
+  }
+  .menu_android{
+    display : block;
+    height : 100%;
+    width : 80%;
+    position : absolute;
+    border : 2px solid blue;
+    right : 0;
+    box-shadow : 0 0 6px inset;
+
+  }
+  .menu_android ul {
+    /* border : 2px solid green; */
+    padding : 0;
+    margin : 0;
+  }
+  .menu_android ul li {
+    list-style-type: none;
+    border : 2px solid blue;
+    padding : 5px;
+
+  }
+  .menu_android ul li a {
+    text-decoration : none;
+    color : var(--first-color);
+  }
+  .menu_android ul li a:hover {
+    background-color : var(--first-color-alt);
+    color : white;
+  }
 }
