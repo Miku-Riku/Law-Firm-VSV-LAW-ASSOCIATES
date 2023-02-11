@@ -5,29 +5,37 @@
 :root{
   /*========FONT=========*/
   --body-font: 'Poppins', sans-serif;
+  --header-height : 13vh;
+  --body-height : 88vh;
   --first-shade : #00A6FB;
   --second-shade : #0582CA;
   --third-shade : #006494;
+  --fourth-shade : #003554;
   /*========FONT SIZE=====*/
   --h1-font-size : 55px;
-  --normal-font-size : 18px;
+  --h2-font-size : ;
+  --big-font-size : 23px;
+  --normal-font-size : 21px;
+  --small-font-size : 18px;
   --font-color : #00A6FB;
 }
 
+*, *::after, *::before{
+  box-sizing: border-box;
+}
 
 /* ==============BODY============= */
+html {
+  scroll-behavior: smooth;
 
+}
 
 body {
   font-family: var(--body-font);
   text-decoration : none;
-  box-sizing : border-box;
   padding : 0px;
   margin : 0px;
   font-size : 25px;
-}
-.godparent {
-
 }
 
 /* ==========HEADER============ */
@@ -37,7 +45,7 @@ header {
   z-index: 999;
 }
 .header {
-  height : 15vh;
+  height : var(--header-height);
   box-shadow : 0px 0px 2.5px black;
   display : flex;
   justify-content: space-between;
@@ -80,9 +88,21 @@ header {
 
 .menu ul li {
   list-style-type : none;
+    text-align : center;
+    font-size : 0.8em;
+    background-color: var(--first-shade);
+    cursor : pointer;
+    padding : 9px;
 }
 
-.menu_link, button {
+.menu ul li:hover{
+  background-color: var(--second-shade);
+}
+.menu_link {
+  text-decoration : none;
+  color : white;
+}
+button {
   font-size : 0.8em;
   background-color: var(--first-shade);
   cursor : pointer;
@@ -96,14 +116,19 @@ header {
   background-color: var(--second-shade);
 }
 
- .active {
-   background-color: var(--second-shade);
- }
-
 /* =========PAGE BODY============ */
+.home_swiper{
+    height : var(--header-height);
+    width : 100%;
+    position : absolute;
+    top : 0;
+    left : 0;
+    right : 0;
+    background-color : red;
+}
 
-.body_area {
-  height : 85vh;
+.home {
+  height : var(--body-height);
   width : 100%;
   display : flex;
   justify-content: center;
@@ -176,7 +201,7 @@ header {
 }
 
 .body_area .body_area_container .text #description{
-  font-size : var(--normal-font-size);
+  font-size : var(--small-font-size);
   display : block;
   cursor : pointer;
   transition-property : transform;
@@ -207,16 +232,136 @@ header {
   font-size : 1.35em;
 }
 
+.body_explore_btn a {
+  text-decoration: none;
+  color : white;
+}
 .page_gap {
   width : 100%;
   height : 20vh;
   background-color : #006494;
   box-shadow: 0 0 5px inset;
+  display : flex;
+  flex-direction: column-reverse;
+}
+.about_swiping, .contact_swiping{
+  height : var(--header-height);
+}
+/* =====ABOUT US======\ */
+.about {
+  height : var(--body-height);
+  box-sizing: border-box;
+}
+.about::after{
+
+}
+.about_title, .contact_header {
+  text-align: center;
+  padding : 5px 0;
+  font-size : 30px;
+  box-shadow: 0 3px 8px var(--second-shade);
+  position : relative;
+  cursor: pointer;
+}
+
+.header_design {
+  width : 75%;
+  margin : 0 auto;
+  position : relative;
+  background-color : var(--second-shade);
+  color : white;
 }
 
 
+.about_description, .contact_description{
+  font-size : var(--big-font-size);
+  text-align : center;
+  line-height : 30px;
+  margin : 15px auto;
 
+}
 
+.about_description > span {
+  font-size : 35px;
+  color : var(--third-shade);
+}
+.about_what_we_can_do{
+  text-align : center;
+  background-color: var(--second-shade);
+  color : white;
+  margin : 0 auto;
+  width : 30%;
+}
+.wat_we_do_points {
+  margin : 0 auto;
+  width : 85%;
+  height : 55%;
+  overflow-y: auto;
+  border : 2px solid var(--second-shade);
+  box-shadow: 0px 0px 4px 1px var(--first-shade);
+  padding : 0;
+}
+
+.wat_we_do_points::-webkit-scrollbar {
+  width : 18px;
+}
+.wat_we_do_points::-webkit-scrollbar-thumb {
+  background-color: var(--first-shade);
+}
+.wat_we_do_points::-webkit-scrollbar-thumb:hover {
+  background-color : var(--second-shade);
+}
+.wat_we_do_points::-webkit-scrollbar-track {
+    box-shadow : 0 0 6px var(--second-shade) inset;
+}
+
+.wat_we_do_points ul{
+  margin : auto 0;
+  padding :  0px;
+  list-style-position: inside;
+}
+
+.wat_we_do_points ul li {
+  padding : 20px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--first-shade);
+  transition : color, background-color 0.5s;
+}
+.wat_we_do_points ul li:hover {
+  background-color : var(--second-shade);
+  color : white;
+}
+
+/* ============contact apage ============== */
+.contact {
+  height : var(--body-height);
+}
+.contact_body{
+  width : 85%;
+  border : 2px solid var(--second-shade);
+  box-shadow: 0 0 8px var(--second-shade);
+  margin : 0 auto;
+  text-align : center;
+  cursor : pointer;
+
+}
+.contact_title {
+  border-bottom : 1px solid black;
+  box-shadow: 0 0 3px black;
+  padding : 12px 0;
+  background-color : var(--second-shade);
+  color : white;
+}
+.contact_title:hover {
+  background-color: var(--third-shade);
+}
+.contact_descr {
+  overflow-y : hidden;
+  height : 0;
+  font-style : normal;
+  font-size : var(--normal-font-size);
+  transition : height 0.4s;
+}
 
 
 /* =============media query============= */

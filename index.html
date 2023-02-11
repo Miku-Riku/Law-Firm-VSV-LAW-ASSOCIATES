@@ -13,7 +13,6 @@
     <div class="godparent">
       <!-- HEADER  -->
       <header>
-
         <div class="header">
           <!--====LOGO==== -->
           <div class="logo">
@@ -24,8 +23,9 @@
           <div class="menu">
             <!-- ===========MENU ICONS=========== -->
             <ul>
-              <li><a href = "index.html" class = "active menu_link">HOME</a></li>
+              <li><a href = "#main" class = "menu_link">HOME</a></li>
               <li><a href = "#about" class = 'menu_link'> ABOUT</a></li>
+              <li><a href = "#contact" class = 'menu_link'> CONTACT</a></li>
             </ul>
 
           </div>
@@ -40,10 +40,14 @@
 
           <!-- =============SWIPER MENU ENDS HERE================== -->
         </div>
+
       </header>
 
-      <!-- REST OF THE BODY -->
+      <!-- =========swiping to home========= -->
+      <div class="home_swiper" id = 'main'></div>
 
+
+      <!-- HOME -->
         <div class="body_area home">
 
             <div class="body_area_container">
@@ -57,35 +61,121 @@
               </div>
               <br>
               <div class="button explore_btn">
-                <button type="button" name="explore" class = 'body_explore_btn'>Explore<i class="uil uil-navigator"></i></button>
+                <button type="button" name="explore" class = 'body_explore_btn'><a href="#about">Explore <i class="uil uil-navigator"></i></a></button>
               </div>
 
             </div>
 
         </div>
         <!-- ======================gap between pages============== -->
-        <div class="page_gap">
+        <div class="about_page_gap page_gap">
+          <div class="about_swiping" id = 'about'>
 
+          </div>
         </div>
         <!-- page gap ends here -->
 
         <!-- =================ABOUT SECTION==================== -->
         <div class="about">
+          <div class="about_title">
+            <div class = 'header_design'>ABOUT US</div>
+          </div>
+          <div class="about_description">
+            We are a small group of work-efficient knowledgable professional <br>advocates with lead Advocate Mr.VS VENKAT having over <span>15+</span> years of experience.
+          </div>
+          <div class="about_what_we_can_do">
+            What all we can do ?
+          </div>
+
+          <div class="wat_we_do_points">
+            <ul>
+              <li >Drafting up legal documents and preparing court documentation</li>
+              <li>Negotiating contractual legal clauses on behalf of the client</li>
+              <li>Representing the client in court hearings </li>
+              <li id = ''>Explaining complex legal matters clearly to people who have little or no knowledge of legal matters</li>
+              <li>Maintaining the highest standard of clients  care at all times </li>
+              <li>Prioritizing and handling a heavy caseload </li>
+              <li>Dealing professionally with client  feedback, complaints and suggestions</li>
+              <li>Ensuring case files are up to date and kept to strict deadlines </li>
+              <li>Liaising with senior lawyers across the organization </li>
+              <li>Maintaining the Case Management System</li>
+              <li>Meeting with clients and discussing their circumstances and needs</li>
+              <li>Responding to all correspondents through phone, email </li>
+              <li>Ensuring all records are kept up to date and confidential</li>
+              <li>Carrying out general admin work within  office with good environment</li>
+
+            </ul>
+          </div>
 
         </div>
         <!-- ABOUT SECTION ENDS HERE -->
 
         <!-- ======================gap between pages============== -->
-        <!-- <div class="page_gap">
+        <div class="contact_page_gap page_gap">
+          <div class="swiping contact_swiping" id = 'contact'>
 
-        </div> -->
+          </div>
+        </div>
         <!-- page gap ends here -->
 
         <!-- =======================Contact SECTION============ -->
         <div class="contact">
+          <div class="contact_header">
+            <div class = 'header_design'>CONTACT US </div>
+          </div>
 
+          <div class="contact_description">
+            It has never been more easy to contact Us.
+          </div>
+
+          <div class="contact_body">
+            <div class="contact_item-1 contact_item">
+              <div class="contact_address contact_title">ADDRESS <i class="uil uil-angle-down"></i></div>
+              <address class = 'address contact_descr'>
+                D.NO.687, Street No. 100, Old Tiruchanoor Road, near Annapurneswari Devi Temple, Kennedy Nagar, Ashok Nagar, Tirupati, Andhra Pradesh 517501
+              </address>
+            </div>
+
+            <div class="contact_item-2 contact_item">
+              <div class="contact_opening_hours contact_title">  OPENING-HOURS <i class="uil uil-angle-down"></i></div>
+              <div class="opening_hours contact_descr">
+                Monday	8:30 am–7:30 pm
+                Tuesday	8:30 am–7:30 pm
+                Wednesday	8:30 am–7:30 pm
+                Thursday	8:30 am–7:30 pm
+                Friday	10:30 am–6 pm
+                Saturday	8:30 am–7:30 pm
+                Sunday	10:30 am–6 pm
+              </div>
+            </div>
+
+            <div class="contact_item-3 contact_item">
+              <div class="contact_number_header contact_title">CONTACT NUMBER <i class="uil uil-angle-down"></i></div>
+              <div class="contact_number contact_descr">+91 9491738415  </div>
+            </div>
+
+            <div class="contact_item-4 contact_item">
+              <div class="contact_email contact_title">E-MAIL ID <i class="uil uil-angle-down"></i></div>
+              <div class="mail_id contact_descr">
+                vsvlawassociates2000@gmail.com <br>
+                vsvenkatadvocate@gmail.com
+              </div>
+            </div>
+          </div>
         </div>
 
+
+
+
+
+
+
+
+
+
+
     </div>
+
+    <script type="text/javascript" src = "assets/main.js"></script>
   </body>
 </html>
