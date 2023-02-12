@@ -167,7 +167,7 @@ button {
   text-align : center;
 }
 
-.body_area .body_area_container .text #welcome{
+.body_area .body_area_container .text #welcome, #welcome-2{
   font-size : var(--h1-font-size);
   /* border : 3px solid green; */
   font-weight: 600;
@@ -179,8 +179,11 @@ button {
   position : relative;
   padding : 0.37em;
 }
+#welcome-2 {
+    display : none;
+}
 
-.body_area .body_area_container .text #welcome:hover{
+.body_area .body_area_container .text #welcome:hover, #welcome-2:hover{
   transform: translate(0.8px, 2px);
   font-weight: bolder;
   color : var(--second-shade);
@@ -379,18 +382,114 @@ button {
 
 @media screen and (max-width : 960px) {
   :root {
-    --body-font: 'Poppins', sans-serif;
-    --first-color : #00A6FB;
-    --first-color-alt : #0582CA;
-
     /* =========Font Size============ */
     --h1-font-size : 47px;
     --h2-font-size : 25.5px;
     --big-font-size : 19px;
     --normal-font-size : 17px;
     --small-font-size : 16px;
-    --font-color : #00A6FB;
   }
+}
+@media screen and (max-width : 801px){
+  :root {
+    --h1-font-size : 44px;
+    --h2-font-size : 24px;
+    --big-font-size : 18px;
+    --normal-font-size : 16px;
+    --small-font-size : 15px;
+  }
+}
+@media screen and (max-width : 750px){
+  :root {
+    --h1-font-size : 42px;
+    --h2-font-size : 23px;
+    --big-font-size : 17px;
+    --normal-font-size : 15px;
+    --small-font-size : 14px;
+  }
+}
+@media screen and (max-width : 612px){
+  :root {
+    --h1-font-size : 39px;
+    --h2-font-size : 23px;
+    --big-font-size : 17px;
+    --normal-font-size : 15px;
+    --small-font-size : 14px;
+  }
+}
+@media screen and (max-width : 571px){
+  :root {
+    --h1-font-size : 37px;
+    --h2-font-size : 23px;
+    --big-font-size : 13px;
+    --normal-font-size : 13px;
+    --small-font-size : 14px;
+  }
+}
+@media screen and (max-width : 540px){
+  :root {
+    --h1-font-size : 36px;
+  }
+  .body_area .body_area_container .text #welcome{
+    margin : 11% 0 4%;
+  }
+}
+@media screen and (max-width : 524px){
+  :root {
+    --h1-font-size : 35px;
+  }
+  .body_area .body_area_container .text #welcome{
+    margin : 10% 0 4%;
+  }
+}
+@media screen and (max-width : 515px){
+  :root {
+    --h1-font-size : 33px;
+    --h2-font-size : 21px;
+    --big-font-size : 13px;
+    --normal-font-size : 12px;
+    --small-font-size : 12px;
+  }
+  .body_area .body_area_container .text #welcome{
+    display : none;
+  }
+  #welcome-2 {
+    display : block;
+    margin : 13% 0 4%;
+  }
+}
+@media screen and (max-width : 488px){
+  :root {
+    --h1-font-size : 32px;
+    --h2-font-size : 20px;
+    --big-font-size : 12px;
+    --normal-font-size : 11px;
+    --small-font-size : 12px;
+  }
+  .body_area .body_area_container .text #welcome{
+    display : none;
+  }
+  #welcome-2 {
+    display : block;
+    margin : 15% 0 4%;
+  }
+}
+@media screen and (max-width : 445px){
+  :root {
+    --h1-font-size : 30px;
+    --h2-font-size : 19px;
+    --big-font-size : 11px;
+    --normal-font-size : 10px;
+    --small-font-size : 11px;
+  }
+  .body_area .body_area_container .text #welcome{
+    display : none;
+  }
+  #welcome-2 {
+    display : block;
+    margin : 18% 0 4%;
+  }
+}
 
   /* ==========header=========
   .header {
