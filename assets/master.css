@@ -6,14 +6,14 @@
   /*========FONT=========*/
   --body-font: 'Poppins', sans-serif;
   --header-height : 13vh;
-  --body-height : 88vh;
+  --body-height : 87vh;
   --first-shade : #00A6FB;
   --second-shade : #0582CA;
   --third-shade : #006494;
   --fourth-shade : #003554;
   /*========FONT SIZE=====*/
   --h1-font-size : 55px;
-  --h2-font-size : ;
+  --h2-font-size : 31.5px;
   --big-font-size : 23px;
   --normal-font-size : 21px;
   --small-font-size : 18px;
@@ -35,7 +35,7 @@ body {
   text-decoration : none;
   padding : 0px;
   margin : 0px;
-  font-size : 25px;
+  font-size : var(--normal-font-size);
 }
 
 /* ==========HEADER============ */
@@ -69,6 +69,9 @@ header {
   object-fit: contain;
 }
 
+.logo_descr{
+  display : none;
+}
 /* ==========MENU=========== */
 .menu {
   width : 40%;
@@ -127,6 +130,7 @@ button {
     background-color : red;
 }
 
+/* body_area */
 .home {
   height : var(--body-height);
   width : 100%;
@@ -143,7 +147,6 @@ button {
   background-color: pink;
   width : 100%;
   height : 100%;
-  border : 0px solid red;
   z-index : -5;
   background-image: url("images/image-3.jpg");
   background-repeat : no-repeat;
@@ -156,9 +159,11 @@ button {
 .body_area .body_area_container {
     height : 90%;
     width : 80%;
+    /* border : 2px solid red; */
 }
 
 .body_area .body_area_container .text {
+  /* border : 2px solid red; */
   text-align : center;
 }
 
@@ -172,7 +177,7 @@ button {
   transition-property : transform;
   transition-duration : 0.5s;
   position : relative;
-  padding : 20px;
+  padding : 0.37em;
 }
 
 .body_area .body_area_container .text #welcome:hover{
@@ -207,7 +212,7 @@ button {
   transition-property : transform;
   transition-duration : 0.5s;
   margin : 2% 0;
-  line-height : 24px;
+  line-height : 1.33em;
 }
 
 .body_area .body_area_container .text #description:hover {
@@ -217,14 +222,15 @@ button {
 }
 
 .body_area .body_area_container .explore_btn {
-  width : 100%;
+  /* border : 2px solid red; */
   display : flex;
   justify-content: center;
+
 }
 
 .body_explore_btn {
-    font-size : 1.2em;
-    column-gap : 7px;
+  /* border : 2px solid red; */
+    font-size : 1.5em;
     transition : font-size 1s;
 }
 
@@ -236,6 +242,8 @@ button {
   text-decoration: none;
   color : white;
 }
+
+/* ==abot page gap=== */
 .page_gap {
   width : 100%;
   height : 20vh;
@@ -252,19 +260,18 @@ button {
   height : var(--body-height);
   box-sizing: border-box;
 }
-.about::after{
 
-}
-.about_title, .contact_header {
+.about_title, .contact_title_header {
   text-align: center;
-  padding : 5px 0;
-  font-size : 30px;
+  padding : 0.21em 0;
+  font-size : var(--h2-font-size);
   box-shadow: 0 3px 8px var(--second-shade);
   position : relative;
   cursor: pointer;
 }
 
-.header_design {
+/* =====also header design for all other header in different pages==== */
+.about_header_design, .header_design {
   width : 75%;
   margin : 0 auto;
   position : relative;
@@ -276,26 +283,30 @@ button {
 .about_description, .contact_description{
   font-size : var(--big-font-size);
   text-align : center;
-  line-height : 30px;
-  margin : 15px auto;
+  line-height : 1.6em;
+  margin : 0.8em auto;
+  /* border : 2px solid red; */
 
 }
 
 .about_description > span {
-  font-size : 35px;
+  font-size : 1.9em;
   color : var(--third-shade);
 }
 .about_what_we_can_do{
+  font-size : 1.1em;
   text-align : center;
+  /* border : 2px solid red; */
   background-color: var(--second-shade);
   color : white;
   margin : 0 auto;
   width : 30%;
 }
+
 .wat_we_do_points {
   margin : 0 auto;
   width : 85%;
-  height : 55%;
+  height : 53%;
   overflow-y: auto;
   border : 2px solid var(--second-shade);
   box-shadow: 0px 0px 4px 1px var(--first-shade);
@@ -303,7 +314,7 @@ button {
 }
 
 .wat_we_do_points::-webkit-scrollbar {
-  width : 18px;
+  width : 1.1em;
 }
 .wat_we_do_points::-webkit-scrollbar-thumb {
   background-color: var(--first-shade);
@@ -322,9 +333,9 @@ button {
 }
 
 .wat_we_do_points ul li {
-  padding : 20px 15px;
+  padding : 1.0em 0.88em;
   cursor: pointer;
-  border-bottom: 1px solid var(--first-shade);
+  border-bottom: 0.06em solid var(--first-shade);
   transition : color, background-color 0.5s;
 }
 .wat_we_do_points ul li:hover {
@@ -346,9 +357,9 @@ button {
 
 }
 .contact_title {
-  border-bottom : 1px solid black;
+  border-bottom : 1px solid blue;
   box-shadow: 0 0 3px black;
-  padding : 12px 0;
+  padding : 0.7em 0;
   background-color : var(--second-shade);
   color : white;
 }
@@ -366,21 +377,36 @@ button {
 
 /* =============media query============= */
 
-@media screen and (max-width : 480px) {
+@media screen and (max-width : 960px) {
   :root {
     --body-font: 'Poppins', sans-serif;
     --first-color : #00A6FB;
     --first-color-alt : #0582CA;
 
     /* =========Font Size============ */
-    --h1-font-size : 37px;
+    --h1-font-size : 47px;
+    --h2-font-size : 25.5px;
+    --big-font-size : 19px;
     --normal-font-size : 17px;
+    --small-font-size : 16px;
+    --font-color : #00A6FB;
   }
+
+  /* ==========header=========
+  .header {
+    justify-content: center;
+  }
+  .logo {
+    margin-left : 0;
+
+  }
+
+  ====side menu======
   .menu {
     display : none;
   }
   .menu_android{
-    display : block;
+    display : none;
     height : 100%;
     width : 80%;
     position : absolute;
@@ -390,7 +416,7 @@ button {
 
   }
   .menu_android ul {
-    /* border : 2px solid green; */
+    border : 2px solid green;
     padding : 0;
     margin : 0;
   }
@@ -408,4 +434,4 @@ button {
     background-color : var(--first-color-alt);
     color : white;
   }
-}
+} */
