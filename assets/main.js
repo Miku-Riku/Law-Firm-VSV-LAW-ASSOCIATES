@@ -6,11 +6,11 @@ contact_items.forEach((item) => {
 
   title.addEventListener('click', () => {
     const openItem = document.querySelector('.active');
-    console.log(2);
+
     if(openItem != null) {
-      console.log(5);
+
       if(openItem !== item){
-        console.log(7);
+        
         toggle(openItem);
       }
     }
